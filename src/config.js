@@ -19,7 +19,7 @@ export function saveConfig(configPath, updates) {
   const existing = loadConfig(configPath);
   const merged = { ...existing, ...updates };
   fs.mkdirSync(path.dirname(configPath), { recursive: true });
-  fs.writeFileSync(configPath, JSON.stringify(merged, null, 2) + '\n');
+  fs.writeFileSync(configPath, JSON.stringify(merged, null, 2) + '\n', { mode: 0o600 });
   return merged;
 }
 

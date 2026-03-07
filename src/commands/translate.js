@@ -108,7 +108,11 @@ async function translateText(texts, opts) {
       template: formatTranslationResult,
     }));
   } catch (error) {
-    printErr(`Error: ${error.message}`);
+    if (opts.json) {
+      print(JSON.stringify({ error: error.message }));
+    } else {
+      printErr(`Error: ${error.message}`);
+    }
     process.exit(1);
   }
 }
@@ -177,7 +181,11 @@ async function translateFile(filePath, opts) {
 
     print(formatOutput(result, { json: opts.json }));
   } catch (error) {
-    printErr(`Error: ${error.message}`);
+    if (opts.json) {
+      print(JSON.stringify({ error: error.message }));
+    } else {
+      printErr(`Error: ${error.message}`);
+    }
     process.exit(1);
   }
 }
