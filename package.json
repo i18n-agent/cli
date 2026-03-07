@@ -1,0 +1,44 @@
+{
+  "name": "@i18n-agent/cli",
+  "version": "1.0.0",
+  "description": "Terminal client for i18n-agent translation service",
+  "type": "module",
+  "bin": {
+    "i18nagent": "./bin/i18nagent.js"
+  },
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "node --test tests/unit/*.test.js",
+    "test:integration": "node --test tests/integration/*.test.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "commander": "^12.0.0"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "docs/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "i18n",
+    "translation",
+    "cli",
+    "internationalization",
+    "localization"
+  ],
+  "author": "FatCouple OU",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i18n-agent/cli.git"
+  },
+  "homepage": "https://i18nagent.ai",
+  "publishConfig": {
+    "access": "public"
+  }
+}
