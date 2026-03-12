@@ -1,6 +1,6 @@
 {
   "name": "@i18n-agent/cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Terminal client for i18n-agent translation service",
   "type": "module",
   "bin": {
